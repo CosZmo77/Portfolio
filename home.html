@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>My Portfolio</title>
+    <script src="https://kit.fontawesome.com/e92bbf9d67.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/2logo2.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi,I'm <br><span>Syed Saad Ahmed</span> </h1>
+                <p>Designer</p>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------------About------------------------ -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about1">
+                    <img src="images/new.png">
+                </div>
+                <div class="about2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="descp">I Am Passionate Astrophilia Obsessed Individual From Mysore Who Loves Coding and Designing, I Have Graduated My Bachelors
+                        of Computer Application From Vidya Vikas, I'm Highly Interested in Making Games and Designing
+                        Web Applications, I have worked as a Freelancer of Photoshop And Adobe Premiere Pro, Working to
+                        become a Software Developer</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills </p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience </p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!-- -------------Skills------------- -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML and CSS</span><br> Web Development</li>
+                            <li><span>Python</span><br>Developing software</li>
+                            <li><span>Java</span><br>Andriod Development</li>
+                            <li><span>Photoshop</span><br>Graphic Designing</li>
+                            <li><span>Adobe Premiere Pro</span><br>Video Editing </li>
+                        </ul>
+                    </div>
+                    <!-- ----------------Experience--------------- -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Freelancer of Photoshop</span><br>Made Graphic Designs </li>
+                            <li><span>Web Development</span><br>Made Simple Portfolio</li>
+                        </ul>
+                    </div>
+                    <!-- --------------------Education------------- -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>BCA <br></span>Vidya Vikas</li>
+                            <li><span>Science/PCMC</span><br> Vidya Vikas</li>
+                            <li><span>Secondary School</span><br> Malnad High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------Services---------------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-terminal"></i>
+                    <h2>Web-Development</h2>
+                    <p>Web development refers to the building, creating, and maintaining of websites.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h2>Graphic Designing</h2>
+                    <p>Graphic design uses visual elements to communicate a brand's story, ideas, or messages.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Game Development</h2>
+                    <p>Game Development is the art of creating games and describes the design, development and release of a game.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ----------------------------Contact-------------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="leftcon">
+                    <h1 class="subtitle">Contact Me</h1><br>
+                    <p><i class="fa-solid fa-user"></i>syedsaadahmed77@gmail.com</p><br>
+                    <p><i class="fa-solid fa-phone"></i>8892880002</p><br>
+                    <p><i class="fa-solid fa-location"></i>Mysore, Karnataka, India</p>
+                </div>
+                <div class="rightcon">
+                    <div class="socialicon">
+                        <a href="https://www.instagram.com/_.coszmo._/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/CosZmo77" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/syed-saad-ahmed-594151234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <button class="button-27" role="button"><a href="Syed Saad Ahmed - Resume.pdf" download>Download
+                                Resume</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Made with <i class="fa fa-heart"></i></a> by <span>Saad</span></p>
+        </div>
+    </div>
+    <!-- --------------------------Script------------------- -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
